@@ -92,6 +92,9 @@ public abstract class Bag {
      * @return
      */
     public String popItem() {
+        if (this.numberOfContents == 0) {
+            return null;
+        }
         String lastItem = this.contents[this.numberOfContents-1];
         this.contents[this.numberOfContents] = "";
         this.numberOfContents -= 1;
